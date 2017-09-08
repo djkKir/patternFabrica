@@ -6,15 +6,20 @@ import clams.Clams;
 import clams.FreshClams;
 import dough.Dough;
 import dough.ThinCrustDough;
+import pepperoni.Pepperoni;
+import pepperoni.WahhhPepperoni;
 import pizza.PizzaIngredientFactory;
 import sause.Marinarasause;
 import sause.Sauce;
 import veggies.*;
 
-/**
- * Created by k.dodonov on 07.09.2017.
- */
+
 public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
+    @Override
+    public Pepperoni createPepperoni() {
+        return new WahhhPepperoni();
+    }
+
     @Override
     public Dough createDough() {
         return new ThinCrustDough();

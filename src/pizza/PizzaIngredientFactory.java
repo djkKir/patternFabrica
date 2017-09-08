@@ -3,6 +3,7 @@ package pizza;
 import cheese.Cheese;
 import clams.Clams;
 import dough.Dough;
+import pepperoni.Pepperoni;
 import sause.Sauce;
 import veggies.Veggies;
 
@@ -15,4 +16,5 @@ public interface PizzaIngredientFactory {
     Cheese createCheese();
     Veggies[] createVeggies();
     Clams createClam();
+    Pepperoni createPepperoni();
 }

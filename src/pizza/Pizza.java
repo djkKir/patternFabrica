@@ -7,6 +7,8 @@ import pepperoni.Pepperoni;
 import sause.Sauce;
 import veggies.Veggies;
 
+import java.util.Arrays;
+
 public abstract class Pizza {
     public String name;
     public Dough dough;
@@ -14,7 +16,7 @@ public abstract class Pizza {
     public Veggies veggies[];
     public Cheese cheese;
     public Pepperoni pepperoni;
-    public Clams clanm;
+    public Clams clam;
 
     public abstract void prepare();
 
@@ -27,10 +29,10 @@ public abstract class Pizza {
     }
 
     void box(){
-        System.out.println("Place pizza in official pizza.PizzaStore box");
+        System.out.println("Place pizza in official PizzaStore box");
     }
 
-    void setName(String name){
+    public void setName(String name){
         this.name = name;
     }
 
@@ -38,7 +40,16 @@ public abstract class Pizza {
         return name;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "Pizza{" +
+                "name='" + name + '\'' +
+                ", dough=" + dough +
+                ", sauce=" + sauce +
+                ", veggies=" + Arrays.toString(veggies) +
+                ", cheese=" + cheese +
+                ", pepperoni=" + pepperoni +
+                ", clam=" + clam +
+                '}';
+    }
 }

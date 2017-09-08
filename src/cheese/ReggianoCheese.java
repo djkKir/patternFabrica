@@ -5,6 +5,6 @@ package cheese;
  */
 public class ReggianoCheese extends Cheese {
     public ReggianoCheese() {
-        name = "Reggiano cheese";
+        System.out.println("Reggiano cheese");
     }
 }

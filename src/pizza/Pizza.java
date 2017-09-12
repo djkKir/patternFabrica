@@ -4,7 +4,7 @@ import cheese.Cheese;
 import clams.Clams;
 import dough.Dough;
 import pepperoni.Pepperoni;
-import sause.Sauce;
+import sauce.Sauce;
 import veggies.Veggies;
 
 import java.util.Arrays;
@@ -37,19 +37,17 @@ public abstract class Pizza {
     }
 
     public String getName(){
-        return name;
+        return this.toString();
     }
 
     @Override
     public String toString() {
-        return "Pizza{" +
-                "name='" + name + '\'' +
-                ", dough=" + dough +
-                ", sauce=" + sauce +
-                ", veggies=" + Arrays.toString(veggies) +
-                ", cheese=" + cheese +
-                ", pepperoni=" + pepperoni +
-                ", clam=" + clam +
-                '}';
+        return  name + '\n' +
+                dough + '\n' +
+                sauce + '\n' +
+                Arrays.toString(veggies) +'\n' +
+                cheese + '\n' +
+                pepperoni + '\n' +
+                clam;
     }
 }

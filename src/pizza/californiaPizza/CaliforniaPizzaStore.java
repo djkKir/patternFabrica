@@ -1,26 +1,37 @@
 package pizza.californiaPizza;
 
-import pizza.Pizza;
-import pizza.PizzaStore;
+import pizza.*;
 
 /**
  * Created by k.dodonov on 08.09.2017.
  */
 public class CaliforniaPizzaStore extends PizzaStore {
-    @Override
-    public Pizza createPizza(String type) {
+
+    public Pizza createPizza(String type){
+    Pizza pizza = null;
+    PizzaIngredientFactory ingredientFactory = new CaliforniaIngredientfactory();
+
         if (type.equals("cheese")){
-            return new CaliforniaStyleCheesePizza();
-        }
-        else if (type.equals("veggie")){
-            return new CaliforniaStyleVeggiePizza();
-        }
-        else if (type.equals("clam")){
-            return new CaliforniaStyleClamPizza();
-        }
-        else if (type.equals("pepperoni")){
-            return new CaliforniaStylePepperoniPizza();
-        }
-        else return null;
+        pizza = new CheesePizza(ingredientFactory);
+        pizza.setName("California Style Cheese Pizza");
+
     }
+        else if (type.equals("veggie")){
+        pizza = new VeggiePizza(ingredientFactory);
+        pizza.setName("California Style Veggie Pizza");
+
+    }
+        else if (type.equals("clam")){
+        pizza = new ClamPizza(ingredientFactory);
+        pizza.setName("California Style Clam Pizza");
+
+    }
+        else if (type.equals("pepperoni")){
+        pizza = new PepperoniPizza(ingredientFactory);
+        pizza.setName("California Style Pepperoni Pizza");
+
+    }
+        return pizza;
+
+}
 }

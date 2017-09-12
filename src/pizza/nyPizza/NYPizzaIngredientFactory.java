@@ -9,8 +9,8 @@ import dough.ThinCrustDough;
 import pepperoni.Pepperoni;
 import pepperoni.WahhhPepperoni;
 import pizza.PizzaIngredientFactory;
-import sause.Marinarasause;
-import sause.Sauce;
+import sauce.Marinarasause;
+import sauce.Sauce;
 import veggies.*;
 
 
@@ -38,7 +38,7 @@ public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
     @Override
     public Veggies[] createVeggies() {
         Veggies veggies[] = {new Garling(), new Onion(), new Mashroom(), new RedPepper()};
-        return new Veggies[0];
+        return veggies;
     }
 
     @Override

@@ -7,6 +7,6 @@ import pizza.CheesePizza;
  */
 public class MozzarellaCheese extends Cheese {
     public MozzarellaCheese() {
-        System.out.println("Mozzarella");
+        name = "Mozzarella";
     }
 }

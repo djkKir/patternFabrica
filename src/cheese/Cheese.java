@@ -6,7 +6,8 @@ package cheese;
 public class Cheese {
     String name ;
 
-
-
-
+    @Override
+    public String toString() {
+        return  name ;
+    }
 }
